@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    margin-bottom: 60px;
+    background: #f8f9fa;
+}
+
+main.container {
+    min-height: 70vh;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.table {
+    vertical-align: middle;
+}
+
+    .table th {
+        white-space: nowrap;
+    }
+
+.card {
+    border-radius: 8px;
+}
+
+.footer {
+    background: #fff;
+}
+
+.text-danger {
+    font-size: .875rem;
+}

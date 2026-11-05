@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Employee Management</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">Employee Management</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="nav-link" asp-controller="Employees" asp-action="Index">Employees</a>
+                <a class="nav-link" asp-controller="Employees" asp-action="Create">Add Employee</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container mt-4">
+        @if (TempData["SuccessMessage"] is string msg)
+        {
+            <div class="alert alert-success">@msg</div>
+        }
+        @RenderBody()
+    </main>
+    <footer class="border-top mt-5 py-3"><div class="container text-muted">Employee Management MVC Lab</div></footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body></html>

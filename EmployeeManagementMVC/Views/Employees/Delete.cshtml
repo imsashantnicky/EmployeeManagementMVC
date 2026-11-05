@@ -1,0 +1,10 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Delete Employee";
+}
+<h1>Delete Employee</h1>
+<div class="alert alert-warning">Confirm employee deletion?</div>
+<p><strong>@Model.FullName</strong> — @Model.Email — @Model.Department</p>
+<form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a></form>
